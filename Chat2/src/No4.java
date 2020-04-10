@@ -1,8 +1,7 @@
+import util.IOUtil;
 import util.LogUtil;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 /**
  * 题目：二维数组中的查找
@@ -24,14 +23,10 @@ public class No4 {
             LogUtil.logIntArray(arrays[i]);
         }
 
-        final InputStreamReader inputStreamReader = new InputStreamReader(System.in);
-        final BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-        System.out.print("read:");
-        int expertNum = Integer.parseInt(bufferedReader.readLine());
+        int expertNum = Integer.parseInt(IOUtil.readLine());
         while (expertNum != -1) {
             result1(arrays, expertNum);
-            System.out.print("read:");
-            expertNum = Integer.parseInt(bufferedReader.readLine());
+            expertNum = Integer.parseInt(IOUtil.readLine());
         }
     }
 
