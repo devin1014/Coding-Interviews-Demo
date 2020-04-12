@@ -2,11 +2,11 @@ package bean;
 
 import java.util.Iterator;
 
-public class Node {
+public class LinkNode {
     public final int key;
-    public Node next;
+    public LinkNode next;
 
-    public Node(int key) {
+    public LinkNode(int key) {
         this.key = key;
     }
 
@@ -15,14 +15,14 @@ public class Node {
         return String.valueOf(key);
     }
 
-    public Iterator<Node> generate() {
+    public Iterator<LinkNode> generate() {
         return new NodeIterator(this);
     }
 
-    private static class NodeIterator implements Iterator<Node> {
-        private Node node;
+    private static class NodeIterator implements Iterator<LinkNode> {
+        private LinkNode node;
 
-        public NodeIterator(Node node) {
+        public NodeIterator(LinkNode node) {
             this.node = node;
         }
 
@@ -32,8 +32,8 @@ public class Node {
         }
 
         @Override
-        public Node next() {
-            Node result = node;
+        public LinkNode next() {
+            LinkNode result = node;
             node = node.next;
             return result;
         }
