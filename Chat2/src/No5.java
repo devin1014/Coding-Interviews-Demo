@@ -43,6 +43,6 @@ public class No5 {
                 //再往前的字符没有空格了，可以直接输出，不用再比了。
             }
         }
-        LogUtil.logIntArray(chars);
+        LogUtil.logCharArray(chars);
     }
 }
